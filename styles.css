@@ -14,29 +14,6 @@ body{
     grid-template-rows: auto 4fr;
 }
 
-.dashboard{
-    grid-column: 1 / 2;
-    grid-row: 1 / -1;
-    background-color: rgb(0, 153, 255);
-    color: white;
-    font-size: 1.5rem;
-    padding: 1rem;
-}
-
-.dashboard ul{
-    margin-top: 40px;
-    list-style-type: none;
-}
-
-.dashboard li{
-    margin-top: 10px;
-}
-
-.dashboard a{
-    color: white;
-    text-decoration: none;
-}
-
 header{
     grid-column: 2 / -1;
     grid-row: 1 / 2;
@@ -150,6 +127,57 @@ header .user-profile-logo{
 
 /* 185 SIDEBAR */
 
+
+.dashboard{
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    background-color: rgb(0, 153, 255);
+    color: white;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 3rem;
+}
+
+.dashboard .logo img{
+    height: 2rem;
+}
+
+.dashboard .logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 2rem;
+}
+
+.dashboard ul{
+    list-style-type: none;
+}
+
+.dashboard li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.dashboard a{
+    color: white;
+    text-decoration: none;
+}
+
+.dashboard ul li img{
+    height: 2rem;
+}
+
+.dashboard p{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dashboard p:hover{
+    border-bottom: 2px solid white;
+}
 
 main{
     display: grid;
