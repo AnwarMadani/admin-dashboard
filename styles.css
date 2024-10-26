@@ -179,60 +179,126 @@ header .user-profile-logo{
     border-bottom: 2px solid white;
 }
 
+
 main{
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
     background-color: lightblue;
-    padding: 20px;
+    padding: 1rem 2rem;
+    gap: 1rem;
 }
+
+.projects > h4{
+    font-size: 1.4rem;
+    margin: 0;
+    grid-column: 1 / -1;
+    margin-bottom: -1.5rem;
+}
+
 
 main .projects{
-    grid-column: 1 / 2;
-    grid-row: 1 / -1;
-    padding: .5rem;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem 1rem;
 }
 
-main .announcements{
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    padding: .5rem;
-}
-
-main .trending{
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-}
+/* 300 */
 
 .card{
     background-color: white;
     border: 1px solid black;
-    border-radius: .5rem;
-    padding: 10px;
+    border-radius: 13px;
+    display: grid;
+    box-shadow: 0 0 3px 1px black;
+    grid-template-rows: 1fr auto;
+    padding: 1rem;
 }
 
-.container{
-    height: 80%;
-    gap: 2rem;
+.card .text{
+    padding: 1rem 1rem 0;
+}
+
+.card .text h5{
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card .buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+
+.buttons img{
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* 357 */
+
+.right-sidebar{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+.right-sidebar > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.right-sidebar > div h4{
+    font-size: 1.4rem;
+    margin: 0;
+    margin-bottom: .5rem;
 }
 
 .announcements-container,
 .trending-container{
     background-color: white;
-    border-radius: 2rem;
-    padding: 1rem;
-    height: 80%;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem 2rem;
+    justify-content: space-around;
+    border-radius: 20px;
 }
 
-.announce{
-    border-bottom: 1px solid grey;
+.announce h6,
+.announce p{
+    margin: 0;
 }
 
-.trending-container{
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+.announce h6{
+    font-size: .9rem;
+}
+
+.announce p{
+    opacity: .7;
+}
+
+.announcements-container .border{
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+}
+
+.trend{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.trend img{
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+}
+
+.trend-text{
+    opacity: .7;
 }
